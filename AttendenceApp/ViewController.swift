@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class ViewController: UIViewController {
 
@@ -49,6 +50,8 @@ class ViewController: UIViewController {
             {
                 loginFailAlert()
             }
+        } catch let error as NSError {
+            print("Could not fetch. \(error), \(error.userInfo)")
         }
     }
     
@@ -82,7 +85,10 @@ class ViewController: UIViewController {
             {
                 loginFailAlert()
             }
+        } catch let error as NSError {
+            print("Could not fetch. \(error), \(error.userInfo)")
         }
+        
     }
     
     func loginFailAlert(){
