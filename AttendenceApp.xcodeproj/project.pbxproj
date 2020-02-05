@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		87A4DED823EA93D300AAC5D9 /* Teacher.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87A4DED723EA93D300AAC5D9 /* Teacher.storyboard */; };
+		87A4DEDA23EA94D300AAC5D9 /* Student.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87A4DED923EA94D300AAC5D9 /* Student.storyboard */; };
 		87B9556123E80C3C00BFD671 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B9556023E80C3C00BFD671 /* AppDelegate.swift */; };
 		87B9556323E80C3C00BFD671 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B9556223E80C3C00BFD671 /* SceneDelegate.swift */; };
 		87B9556523E80C3C00BFD671 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B9556423E80C3C00BFD671 /* ViewController.swift */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		87A4DED723EA93D300AAC5D9 /* Teacher.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Teacher.storyboard; sourceTree = "<group>"; };
+		87A4DED923EA94D300AAC5D9 /* Student.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Student.storyboard; sourceTree = "<group>"; };
 		87B9555D23E80C3C00BFD671 /* AttendenceApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AttendenceApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87B9556023E80C3C00BFD671 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		87B9556223E80C3C00BFD671 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +70,8 @@
 				87B9556E23E80C3D00BFD671 /* LaunchScreen.storyboard */,
 				87B9557123E80C3D00BFD671 /* Info.plist */,
 				87B9556923E80C3C00BFD671 /* AttendenceApp.xcdatamodeld */,
+				87A4DED723EA93D300AAC5D9 /* Teacher.storyboard */,
+				87A4DED923EA94D300AAC5D9 /* Student.storyboard */,
 			);
 			path = AttendenceApp;
 			sourceTree = "<group>";
@@ -129,8 +135,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				87B9557023E80C3D00BFD671 /* LaunchScreen.storyboard in Resources */,
+				87A4DED823EA93D300AAC5D9 /* Teacher.storyboard in Resources */,
 				87B9556D23E80C3D00BFD671 /* Assets.xcassets in Resources */,
 				87B9556823E80C3C00BFD671 /* Main.storyboard in Resources */,
+				87A4DEDA23EA94D300AAC5D9 /* Student.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
