@@ -18,6 +18,8 @@
 		87B9556D23E80C3D00BFD671 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87B9556C23E80C3D00BFD671 /* Assets.xcassets */; };
 		87B9557023E80C3D00BFD671 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87B9556E23E80C3D00BFD671 /* LaunchScreen.storyboard */; };
 		87C640AB23EAB16A00CD75A8 /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C640AA23EAB16A00CD75A8 /* Random.swift */; };
+		87E4A3DA23EAB0EC0059A875 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E4A3D923EAB0EC0059A875 /* Student.swift */; };
+		87E4A3DC23EAB0F50059A875 /* Mentor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E4A3DB23EAB0F50059A875 /* Mentor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		87B9556F23E80C3D00BFD671 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		87B9557123E80C3D00BFD671 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		87C640AA23EAB16A00CD75A8 /* Random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Random.swift; sourceTree = "<group>"; };
+		87E4A3D923EAB0EC0059A875 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
+		87E4A3DB23EAB0F50059A875 /* Mentor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mentor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +82,8 @@
 				87A4DED923EA94D300AAC5D9 /* Student.storyboard */,
 				87A4DEE123EAA9E600AAC5D9 /* RandomString.swift */,
 				87C640AA23EAB16A00CD75A8 /* Random.swift */,
+				87E4A3D923EAB0EC0059A875 /* Student.swift */,
+				87E4A3DB23EAB0F50059A875 /* Mentor.swift */,
 			);
 			path = AttendenceApp;
 			sourceTree = "<group>";
@@ -156,10 +162,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				87B9556523E80C3C00BFD671 /* ViewController.swift in Sources */,
+				87E4A3DA23EAB0EC0059A875 /* Student.swift in Sources */,
 				87A4DEE223EAA9E600AAC5D9 /* RandomString.swift in Sources */,
 				87C640AB23EAB16A00CD75A8 /* Random.swift in Sources */,
 				87B9556123E80C3C00BFD671 /* AppDelegate.swift in Sources */,
 				87B9556B23E80C3C00BFD671 /* AttendenceApp.xcdatamodeld in Sources */,
+				87E4A3DC23EAB0F50059A875 /* Mentor.swift in Sources */,
 				87B9556323E80C3C00BFD671 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
