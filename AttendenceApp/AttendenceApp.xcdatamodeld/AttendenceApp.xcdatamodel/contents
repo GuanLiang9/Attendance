@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14903" systemVersion="18G95" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="AttendanceLog" representedClassName="AttendanceLog" syncable="YES" codeGenerationType="class">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="19B88" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CDAttendanceLog" representedClassName="CDAttendanceLog" syncable="YES" codeGenerationType="class">
         <attribute name="attendanceStatus" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="studentID" optional="YES" attributeType="String"/>
         <attribute name="studentName" optional="YES" attributeType="String"/>
         <attribute name="timelogged" optional="YES" attributeType="String"/>
         <attribute name="uniqueCode" optional="YES" attributeType="String"/>
     </entity>
-    <entity name="Lesson" representedClassName="Lesson" syncable="YES" codeGenerationType="class">
+    <entity name="CDLesson" representedClassName="CDLesson" syncable="YES" codeGenerationType="class">
         <attribute name="codetimegen" optional="YES" attributeType="String"/>
         <attribute name="lesondate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="lessonday" optional="YES" attributeType="String"/>
@@ -15,26 +15,25 @@
         <attribute name="location" optional="YES" attributeType="String"/>
         <attribute name="modulename" optional="YES" attributeType="String"/>
         <attribute name="uniquecode" optional="YES" attributeType="String"/>
-        <relationship name="attendance" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="AttendanceLog"/>
-        <relationship name="mentor" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Mentor" inverseName="lesson" inverseEntity="Mentor"/>
-        <relationship name="student" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Student" inverseName="lesson" inverseEntity="Student"/>
+        <relationship name="mentor" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDMentor" inverseName="lesson" inverseEntity="CDMentor"/>
+        <relationship name="student" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CDStudent" inverseName="lesson" inverseEntity="CDStudent"/>
     </entity>
-    <entity name="Mentor" representedClassName="Mentor" syncable="YES" codeGenerationType="class">
+    <entity name="CDMentor" representedClassName="CDMentor" syncable="YES" codeGenerationType="class">
         <attribute name="mentorID" optional="YES" attributeType="String"/>
         <attribute name="mentorName" optional="YES" attributeType="String"/>
         <attribute name="password" optional="YES" attributeType="String"/>
-        <relationship name="lesson" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Lesson" inverseName="mentor" inverseEntity="Lesson"/>
+        <relationship name="lesson" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CDLesson" inverseName="mentor" inverseEntity="CDLesson"/>
     </entity>
-    <entity name="Student" representedClassName="Student" syncable="YES" codeGenerationType="class">
+    <entity name="CDStudent" representedClassName="CDStudent" syncable="YES" codeGenerationType="class">
         <attribute name="password" optional="YES" attributeType="String"/>
         <attribute name="studentID" optional="YES" attributeType="String"/>
         <attribute name="studentName" optional="YES" attributeType="String"/>
-        <relationship name="lesson" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Lesson" inverseName="student" inverseEntity="Lesson"/>
+        <relationship name="lesson" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CDLesson" inverseName="student" inverseEntity="CDLesson"/>
     </entity>
     <elements>
-        <element name="Student" positionX="-139.37109375" positionY="198.51953125" width="128" height="103"/>
-        <element name="Mentor" positionX="62.4375" positionY="-103.328125" width="128" height="103"/>
-        <element name="Lesson" positionX="70.33203125" positionY="108.5625" width="128" height="193"/>
-        <element name="AttendanceLog" positionX="299.75390625" positionY="203.9609375" width="128" height="118"/>
+        <element name="CDAttendanceLog" positionX="299.75390625" positionY="203.9609375" width="128" height="118"/>
+        <element name="CDLesson" positionX="70.33203125" positionY="108.5625" width="128" height="178"/>
+        <element name="CDMentor" positionX="62.4375" positionY="-103.328125" width="128" height="103"/>
+        <element name="CDStudent" positionX="-139.37109375" positionY="198.51953125" width="128" height="103"/>
     </elements>
 </model>
