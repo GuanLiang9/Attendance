@@ -10,7 +10,7 @@
         <!--Generate Code-->
         <scene sceneID="o3g-6N-xEb">
             <objects>
-                <viewController id="AXR-ZV-x5w" sceneMemberID="viewController">
+                <viewController id="AXR-ZV-x5w" customClass="RandomString" customModule="AttendenceApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4N8-yQ-8sz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -19,6 +19,9 @@
                                 <rect key="frame" x="153" y="410" width="109" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Generate String"/>
+                                <connections>
+                                    <action selector="btnRandom:" destination="AXR-ZV-x5w" eventType="touchUpInside" id="Inb-5j-Agz"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Random Code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nw4-Bf-bqM">
                                 <rect key="frame" x="153" y="230" width="109" height="21"/>
@@ -32,6 +35,9 @@
                         <viewLayoutGuide key="safeArea" id="OJF-rh-tVr"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Generate Code" id="AI9-0o-aF6"/>
+                    <connections>
+                        <outlet property="txtRandom" destination="nw4-Bf-bqM" id="FVn-2K-H69"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O9L-B4-RAH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
