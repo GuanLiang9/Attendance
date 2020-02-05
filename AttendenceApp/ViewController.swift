@@ -19,7 +19,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
+    
     @IBAction func loginTeacher(_ sender: Any) {
         let appDelegate = (UIApplication.shared.delegate) as! AppDelegate
         let managedContext = appDelegate.persistentContainer.viewContext
@@ -89,6 +89,17 @@ class ViewController: UIViewController {
             print("Could not fetch. \(error), \(error.userInfo)")
         }
         
+    }
+    
+    @IBAction func loginAdmin(_ sender: Any) {
+        if true { // if username and password is correct
+            
+            let storyboard = UIStoryboard(name: "Admin", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "Admin") as
+                UIViewController
+            vc.modalPresentationStyle = .fullScreen // try without fullscreen
+            present(vc, animated: true, completion: nil)
+        }
     }
     
     func loginFailAlert(){

@@ -61,7 +61,6 @@
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="loginBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qZj-db-X0j"/>
                                     <action selector="loginTeacher:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yem-a4-iAa"/>
                                 </connections>
                             </button>
@@ -74,8 +73,15 @@
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="loginBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oND-Q1-FMc"/>
                                     <action selector="loginStudent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nx5-Lw-Ubj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1bJ-rW-pVh">
+                                <rect key="frame" x="165" y="722" width="85" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Admin Login"/>
+                                <connections>
+                                    <action selector="loginAdmin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dBg-wG-YCh"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -84,9 +90,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="ej4-OJ-WAg"/>
                     <connections>
-                        <outlet property="emailFld" destination="Tl3-FJ-K3Q" id="4Yg-T1-hwy"/>
                         <outlet property="pwdFld" destination="i6e-FJ-O3s" id="2jz-iv-hnE"/>
-                        <outlet property="userFld" destination="Tl3-FJ-K3Q" id="4Sl-aF-GRx"/>
+                        <outlet property="userFld" destination="Tl3-FJ-K3Q" id="jTW-cU-DCn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
