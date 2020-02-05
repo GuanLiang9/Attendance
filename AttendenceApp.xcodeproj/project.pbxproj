@@ -22,6 +22,9 @@
 		87E4A3DC23EAB0F50059A875 /* Mentor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E4A3DB23EAB0F50059A875 /* Mentor.swift */; };
 		E85F8BF223EABC4000E89660 /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85F8BF123EABC4000E89660 /* Lesson.swift */; };
 		E85F8BF623EABD2300E89660 /* AdminController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85F8BF523EABD2300E89660 /* AdminController.swift */; };
+		E85F8BF823EAC4BA00E89660 /* AdminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85F8BF723EAC4BA00E89660 /* AdminViewController.swift */; };
+		E85F8BFA23EAC4E400E89660 /* AddStudentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85F8BF923EAC4E400E89660 /* AddStudentViewController.swift */; };
+		E85F8BFC23EAC4F400E89660 /* AddMentorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85F8BFB23EAC4F400E89660 /* AddMentorViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +45,9 @@
 		87E4A3DB23EAB0F50059A875 /* Mentor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mentor.swift; sourceTree = "<group>"; };
 		E85F8BF123EABC4000E89660 /* Lesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
 		E85F8BF523EABD2300E89660 /* AdminController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminController.swift; sourceTree = "<group>"; };
+		E85F8BF723EAC4BA00E89660 /* AdminViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminViewController.swift; sourceTree = "<group>"; };
+		E85F8BF923EAC4E400E89660 /* AddStudentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStudentViewController.swift; sourceTree = "<group>"; };
+		E85F8BFB23EAC4F400E89660 /* AddMentorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMentorViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +96,9 @@
 				87C640AC23EAB61500CD75A8 /* Admin.storyboard */,
 				E85F8BF123EABC4000E89660 /* Lesson.swift */,
 				E85F8BF523EABD2300E89660 /* AdminController.swift */,
+				E85F8BF723EAC4BA00E89660 /* AdminViewController.swift */,
+				E85F8BF923EAC4E400E89660 /* AddStudentViewController.swift */,
+				E85F8BFB23EAC4F400E89660 /* AddMentorViewController.swift */,
 			);
 			path = AttendenceApp;
 			sourceTree = "<group>";
@@ -169,6 +178,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				87B9556523E80C3C00BFD671 /* ViewController.swift in Sources */,
+				E85F8BFC23EAC4F400E89660 /* AddMentorViewController.swift in Sources */,
 				E85F8BF623EABD2300E89660 /* AdminController.swift in Sources */,
 				87E4A3DA23EAB0EC0059A875 /* Student.swift in Sources */,
 				87A4DEE223EAA9E600AAC5D9 /* RandomString.swift in Sources */,
@@ -176,6 +186,8 @@
 				87B9556123E80C3C00BFD671 /* AppDelegate.swift in Sources */,
 				87B9556B23E80C3C00BFD671 /* AttendenceApp.xcdatamodeld in Sources */,
 				87E4A3DC23EAB0F50059A875 /* Mentor.swift in Sources */,
+				E85F8BF823EAC4BA00E89660 /* AdminViewController.swift in Sources */,
+				E85F8BFA23EAC4E400E89660 /* AddStudentViewController.swift in Sources */,
 				87B9556323E80C3C00BFD671 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
