@@ -7,3 +7,18 @@
 //
 
 import Foundation
+
+class Student{
+    //student variables
+    var studentName: String
+    var studentNo: String
+    var Password: String
+
+    //initialize student object
+    init(studentname: String, studentno: String, password: String){
+        studentName = studentname
+        studentNo = studentno
+        Password = password
+    }
+
+}

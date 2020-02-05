@@ -7,3 +7,17 @@
 //
 
 import Foundation
+
+class Mentor{
+    //mentor variables
+    var mentorName: String
+    var mentorNo: String
+    var Password: String
+    
+    //initialize mentor object
+    init(mentorname: String, mentorno: String, password: String){
+        mentorName = mentorname
+        mentorNo = mentorno
+        Password = password
+    }
+}

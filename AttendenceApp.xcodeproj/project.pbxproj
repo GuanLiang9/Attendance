@@ -20,6 +20,8 @@
 		87C640AD23EAB61500CD75A8 /* Admin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87C640AC23EAB61500CD75A8 /* Admin.storyboard */; };
 		87E4A3DA23EAB0EC0059A875 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E4A3D923EAB0EC0059A875 /* Student.swift */; };
 		87E4A3DC23EAB0F50059A875 /* Mentor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E4A3DB23EAB0F50059A875 /* Mentor.swift */; };
+		E85F8BF223EABC4000E89660 /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85F8BF123EABC4000E89660 /* Lesson.swift */; };
+		E85F8BF623EABD2300E89660 /* AdminController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85F8BF523EABD2300E89660 /* AdminController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		87C640AC23EAB61500CD75A8 /* Admin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Admin.storyboard; sourceTree = "<group>"; };
 		87E4A3D923EAB0EC0059A875 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		87E4A3DB23EAB0F50059A875 /* Mentor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mentor.swift; sourceTree = "<group>"; };
+		E85F8BF123EABC4000E89660 /* Lesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
+		E85F8BF523EABD2300E89660 /* AdminController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +88,8 @@
 				87E4A3D923EAB0EC0059A875 /* Student.swift */,
 				87E4A3DB23EAB0F50059A875 /* Mentor.swift */,
 				87C640AC23EAB61500CD75A8 /* Admin.storyboard */,
+				E85F8BF123EABC4000E89660 /* Lesson.swift */,
+				E85F8BF523EABD2300E89660 /* AdminController.swift */,
 			);
 			path = AttendenceApp;
 			sourceTree = "<group>";
@@ -163,8 +169,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				87B9556523E80C3C00BFD671 /* ViewController.swift in Sources */,
+				E85F8BF623EABD2300E89660 /* AdminController.swift in Sources */,
 				87E4A3DA23EAB0EC0059A875 /* Student.swift in Sources */,
 				87A4DEE223EAA9E600AAC5D9 /* RandomString.swift in Sources */,
+				E85F8BF223EABC4000E89660 /* Lesson.swift in Sources */,
 				87B9556123E80C3C00BFD671 /* AppDelegate.swift in Sources */,
 				87B9556B23E80C3C00BFD671 /* AttendenceApp.xcdatamodeld in Sources */,
 				87E4A3DC23EAB0F50059A875 /* Mentor.swift in Sources */,
