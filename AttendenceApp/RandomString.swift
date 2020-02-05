@@ -8,16 +8,18 @@
 
 import UIKit
 
-class RandomString: UIViewController {
+class RandomStringController: UIViewController {
 
-    @IBOutlet weak var txtRandom: UILabel!
-    @IBAction func btnRandom(_ sender: UIButton) {
-        let length = 12
+    @IBOutlet weak var txtRandomCode: UILabel!
+    @IBAction func codeGenerateBtn(_ sender: UIButton) {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HHmm"
+        let time = dateFormatter.string(from: Date())
+        let length = 8
         let characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
         let randomCharacters = (0..<length).map{_ in characters.randomElement()!}
-        let randomString = String(randomCharacters)
-        txtRandom.text = randomString;
+        let randomString = String(time + randomCharacters)
+        txtRandomCode.text = randomString;
         sender.isHidden = true
     }
-    
 }

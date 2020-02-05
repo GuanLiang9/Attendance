@@ -21,38 +21,46 @@ class ViewController: UIViewController {
     }
     
     @IBAction func loginTeacher(_ sender: Any) {
-        let appDelegate = (UIApplication.shared.delegate) as! AppDelegate
-        let managedContext = appDelegate.persistentContainer.viewContext
-        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Mentor")
-        let searchString = self.userFld.text
-        let searchstring2 = self.pwdFld.text
-        fetchRequest.predicate = NSPredicate(format:"mentorno = %@", searchString!)
-        do {
-            let result = try managedContext.fetch(fetchRequest)
-            if result.count > 0
-            {
-                let username = (result[0] as AnyObject).value(forKey: "mentorno") as! String
-                let password = (result[0] as AnyObject).value(forKey: "password") as! String
-                if (searchString == username && searchstring2 == password)
-                {
-                    let storyboard = UIStoryboard(name: "Mentor", bundle: nil)
-                    let vc = storyboard.instantiateViewController(withIdentifier: "Mentor") as
-                        UIViewController
-                    vc.modalPresentationStyle = .fullScreen // try without fullscreen
-                    present(vc, animated: true, completion: nil)
-                }
-                else if (searchString == username || searchstring2 == password)
-                {
-                    loginFailAlert()
-                }
-            }
-            else
-            {
-                loginFailAlert()
-            }
-        } catch let error as NSError {
-            print("Could not fetch. \(error), \(error.userInfo)")
+        if true { // if username and password is correct
+            
+            let storyboard = UIStoryboard(name: "Teacher", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "Mentor") as
+                UIViewController
+            vc.modalPresentationStyle = .fullScreen // try without fullscreen
+            present(vc, animated: true, completion: nil)
         }
+//        let appDelegate = (UIApplication.shared.delegate) as! AppDelegate
+//        let managedContext = appDelegate.persistentContainer.viewContext
+//        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Mentor")
+//        let searchString = self.userFld.text
+//        let searchstring2 = self.pwdFld.text
+//        fetchRequest.predicate = NSPredicate(format:"mentorno = %@", searchString!)
+//        do {
+//            let result = try managedContext.fetch(fetchRequest)
+//            if result.count > 0
+//            {
+//                let username = (result[0] as AnyObject).value(forKey: "mentorno") as! String
+//                let password = (result[0] as AnyObject).value(forKey: "password") as! String
+//                if (searchString == username && searchstring2 == password)
+//                {
+//                    let storyboard = UIStoryboard(name: "Mentor", bundle: nil)
+//                    let vc = storyboard.instantiateViewController(withIdentifier: "Mentor") as
+//                        UIViewController
+//                    vc.modalPresentationStyle = .fullScreen // try without fullscreen
+//                    present(vc, animated: true, completion: nil)
+//                }
+//                else if (searchString == username || searchstring2 == password)
+//                {
+//                    loginFailAlert()
+//                }
+//            }
+//            else
+//            {
+//                loginFailAlert()
+//            }
+//        } catch let error as NSError {
+//            print("Could not fetch. \(error), \(error.userInfo)")
+//        }
     }
     
     @IBAction func loginStudent(_ sender: Any) {
