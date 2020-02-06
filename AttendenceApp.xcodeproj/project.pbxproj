@@ -17,6 +17,8 @@
 		87B9556B23E80C3C00BFD671 /* AttendenceApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 87B9556923E80C3C00BFD671 /* AttendenceApp.xcdatamodeld */; };
 		87B9556D23E80C3D00BFD671 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87B9556C23E80C3D00BFD671 /* Assets.xcassets */; };
 		87B9557023E80C3D00BFD671 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87B9556E23E80C3D00BFD671 /* LaunchScreen.storyboard */; };
+		87C2774223EBF9370022299F /* ShowTimetableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C2774123EBF9370022299F /* ShowTimetableViewController.swift */; };
+		87C2774423EBFC010022299F /* LessonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C2774323EBFC010022299F /* LessonController.swift */; };
 		87C640AD23EAB61500CD75A8 /* Admin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87C640AC23EAB61500CD75A8 /* Admin.storyboard */; };
 		87E4A3DA23EAB0EC0059A875 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E4A3D923EAB0EC0059A875 /* Student.swift */; };
 		87E4A3DC23EAB0F50059A875 /* Mentor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E4A3DB23EAB0F50059A875 /* Mentor.swift */; };
@@ -40,6 +42,8 @@
 		87B9556C23E80C3D00BFD671 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		87B9556F23E80C3D00BFD671 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		87B9557123E80C3D00BFD671 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		87C2774123EBF9370022299F /* ShowTimetableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowTimetableViewController.swift; sourceTree = "<group>"; };
+		87C2774323EBFC010022299F /* LessonController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonController.swift; sourceTree = "<group>"; };
 		87C640AC23EAB61500CD75A8 /* Admin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Admin.storyboard; sourceTree = "<group>"; };
 		87E4A3D923EAB0EC0059A875 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		87E4A3DB23EAB0F50059A875 /* Mentor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mentor.swift; sourceTree = "<group>"; };
@@ -99,6 +103,8 @@
 				E85F8BF723EAC4BA00E89660 /* AdminViewController.swift */,
 				E85F8BF923EAC4E400E89660 /* AddStudentViewController.swift */,
 				E85F8BFB23EAC4F400E89660 /* AddMentorViewController.swift */,
+				87C2774123EBF9370022299F /* ShowTimetableViewController.swift */,
+				87C2774323EBFC010022299F /* LessonController.swift */,
 			);
 			path = AttendenceApp;
 			sourceTree = "<group>";
@@ -183,10 +189,12 @@
 				87E4A3DA23EAB0EC0059A875 /* Student.swift in Sources */,
 				87A4DEE223EAA9E600AAC5D9 /* RandomString.swift in Sources */,
 				E85F8BF223EABC4000E89660 /* Lesson.swift in Sources */,
+				87C2774223EBF9370022299F /* ShowTimetableViewController.swift in Sources */,
 				87B9556123E80C3C00BFD671 /* AppDelegate.swift in Sources */,
 				87B9556B23E80C3C00BFD671 /* AttendenceApp.xcdatamodeld in Sources */,
 				87E4A3DC23EAB0F50059A875 /* Mentor.swift in Sources */,
 				E85F8BF823EAC4BA00E89660 /* AdminViewController.swift in Sources */,
+				87C2774423EBFC010022299F /* LessonController.swift in Sources */,
 				E85F8BFA23EAC4E400E89660 /* AddStudentViewController.swift in Sources */,
 				87B9556323E80C3C00BFD671 /* SceneDelegate.swift in Sources */,
 			);

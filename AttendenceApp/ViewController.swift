@@ -21,14 +21,6 @@ class ViewController: UIViewController {
     }
     
     @IBAction func loginTeacher(_ sender: Any) {
-//        if true { // if username and password is correct
-//
-//            let storyboard = UIStoryboard(name: "Teacher", bundle: nil)
-//            let vc = storyboard.instantiateViewController(withIdentifier: "Mentor") as
-//                UIViewController
-//            vc.modalPresentationStyle = .fullScreen // try without fullscreen
-//            present(vc, animated: true, completion: nil)
-//        }
         let appDelegate = (UIApplication.shared.delegate) as! AppDelegate
         let managedContext = appDelegate.persistentContainer.viewContext
         let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "CDMentor")
