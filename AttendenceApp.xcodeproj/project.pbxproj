@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8729530023EBFEBE003C9CC0 /* StudentFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872952FF23EBFEBE003C9CC0 /* StudentFunctions.swift */; };
+		8729530223EC0347003C9CC0 /* CLLocationManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8729530123EC0347003C9CC0 /* CLLocationManagerDelegate.swift */; };
 		87A4DED823EA93D300AAC5D9 /* Teacher.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87A4DED723EA93D300AAC5D9 /* Teacher.storyboard */; };
 		87A4DEDA23EA94D300AAC5D9 /* Student.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87A4DED923EA94D300AAC5D9 /* Student.storyboard */; };
 		87A4DEE223EAA9E600AAC5D9 /* RandomString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A4DEE123EAA9E600AAC5D9 /* RandomString.swift */; };
@@ -28,6 +30,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		872952FF23EBFEBE003C9CC0 /* StudentFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentFunctions.swift; sourceTree = "<group>"; };
+		8729530123EC0347003C9CC0 /* CLLocationManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLLocationManagerDelegate.swift; sourceTree = "<group>"; };
 		87A4DED723EA93D300AAC5D9 /* Teacher.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Teacher.storyboard; sourceTree = "<group>"; };
 		87A4DED923EA94D300AAC5D9 /* Student.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Student.storyboard; sourceTree = "<group>"; };
 		87A4DEE123EAA9E600AAC5D9 /* RandomString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomString.swift; sourceTree = "<group>"; };
@@ -99,6 +103,8 @@
 				E85F8BF723EAC4BA00E89660 /* AdminViewController.swift */,
 				E85F8BF923EAC4E400E89660 /* AddStudentViewController.swift */,
 				E85F8BFB23EAC4F400E89660 /* AddMentorViewController.swift */,
+				872952FF23EBFEBE003C9CC0 /* StudentFunctions.swift */,
+				8729530123EC0347003C9CC0 /* CLLocationManagerDelegate.swift */,
 			);
 			path = AttendenceApp;
 			sourceTree = "<group>";
@@ -185,7 +191,9 @@
 				E85F8BF223EABC4000E89660 /* Lesson.swift in Sources */,
 				87B9556123E80C3C00BFD671 /* AppDelegate.swift in Sources */,
 				87B9556B23E80C3C00BFD671 /* AttendenceApp.xcdatamodeld in Sources */,
+				8729530223EC0347003C9CC0 /* CLLocationManagerDelegate.swift in Sources */,
 				87E4A3DC23EAB0F50059A875 /* Mentor.swift in Sources */,
+				8729530023EBFEBE003C9CC0 /* StudentFunctions.swift in Sources */,
 				E85F8BF823EAC4BA00E89660 /* AdminViewController.swift in Sources */,
 				E85F8BFA23EAC4E400E89660 /* AddStudentViewController.swift in Sources */,
 				87B9556323E80C3C00BFD671 /* SceneDelegate.swift in Sources */,

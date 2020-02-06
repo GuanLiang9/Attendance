@@ -17,7 +17,6 @@ class AdminController{
         
         print("Set Up Base Student function is executing...")
         var studentList: [Student] = []
-        
         let studentOne: Student = Student(studentname: "Alan Tan", studentno: "S10111111A" , password: "11111111")
         let studentTwo: Student = Student(studentname: "Brian Lim", studentno: "S10122222 " , password: "22222222")
         let studentThree: Student = Student(studentname: "Champion Quek", studentno: "S10133333C" , password: "33333333")
@@ -28,7 +27,7 @@ class AdminController{
         let studentEight: Student = Student(studentname: "Howard Lim", studentno: "S10188888H" , password: "88888888")
         let studentNine: Student = Student(studentname: "Ian Tang", studentno: "S10199999I" , password: "99999999")
         let studentTen: Student = Student(studentname: "Justin Lam", studentno: "S10112345J" , password: "12345678")
-        
+
         studentList.append(studentOne)
         studentList.append(studentTwo)
         studentList.append(studentThree)
