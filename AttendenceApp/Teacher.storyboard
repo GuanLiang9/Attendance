@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bGQ-NS-Wgv">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
@@ -7,103 +7,60 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Generate Code-->
-        <scene sceneID="o3g-6N-xEb">
+        <!--Random String Controller-->
+        <scene sceneID="r1F-62-wQB">
             <objects>
-                <viewController id="AXR-ZV-x5w" customClass="RandomString" customModule="AttendenceApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="4N8-yQ-8sz">
+                <viewController id="kMi-0Y-9eI" customClass="RandomStringController" customModule="AttendenceApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HQ2-AK-43n">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7JV-Hu-NxE">
-                                <rect key="frame" x="153" y="410" width="109" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8xD-KO-ntj">
+                                <rect key="frame" x="171" y="379" width="81" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Generate String"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Generate"/>
                                 <connections>
-                                    <action selector="btnRandom:" destination="AXR-ZV-x5w" eventType="touchUpInside" id="Inb-5j-Agz"/>
+                                    <action selector="codeGenerateBtn:" destination="kMi-0Y-9eI" eventType="touchUpInside" id="fuE-DH-8ZE"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Random Code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nw4-Bf-bqM">
-                                <rect key="frame" x="153" y="230" width="109" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Random Code" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1KL-Wt-5Yq">
+                                <rect key="frame" x="0.0" y="223" width="414" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="OJF-rh-tVr"/>
+                        <viewLayoutGuide key="safeArea" id="6Ju-Iq-QER"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Generate Code" id="AI9-0o-aF6"/>
-                    <navigationItem key="navigationItem" id="fnh-xb-266"/>
+                    <navigationItem key="navigationItem" id="ZR6-9Y-ZMB"/>
                     <connections>
-                        <outlet property="txtRandom" destination="nw4-Bf-bqM" id="FVn-2K-H69"/>
+                        <outlet property="txtRandomCode" destination="1KL-Wt-5Yq" id="34f-Lz-3SK"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="O9L-B4-RAH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="emU-yB-PSV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1686" y="-950"/>
+            <point key="canvasLocation" x="863.768115942029" y="-956.25"/>
         </scene>
-        <!--Table View Controller-->
-        <scene sceneID="qoL-8Y-uA5">
+        <!--Navigation Controller-->
+        <scene sceneID="D4C-qZ-X1Y">
             <objects>
-                <tableViewController id="TpT-Fz-2CM" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="A4D-Kw-2OG">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="StudentCell" textLabel="aDV-EP-d6e" style="IBUITableViewCellStyleDefault" id="rEc-NP-YtB">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rEc-NP-YtB" id="e3k-aG-eWV">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aDV-EP-d6e">
-                                            <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="AXR-ZV-x5w" kind="show" id="UDa-gZ-CQ4"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <sections/>
-                        <connections>
-                            <outlet property="dataSource" destination="TpT-Fz-2CM" id="hRx-SO-aaG"/>
-                            <outlet property="delegate" destination="TpT-Fz-2CM" id="Oo7-m1-mEw"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" id="9cs-gB-e3b"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="z8D-1d-eKl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="863.768115942029" y="-950.22321428571422"/>
-        </scene>
-        <!--Timetable-->
-        <scene sceneID="gwj-4T-cHT">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9hR-6m-n5z" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Timetable" id="Xgx-1B-NQg"/>
+                <navigationController storyboardIdentifier="Mentor" automaticallyAdjustsScrollViewInsets="NO" id="bGQ-NS-Wgv" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="FWn-zc-pqU">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0wb-ew-pmf">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="TpT-Fz-2CM" kind="relationship" relationship="rootViewController" id="6oc-Dr-uYM"/>
+                        <segue destination="kMi-0Y-9eI" kind="relationship" relationship="rootViewController" id="fU1-MT-jtJ"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vPE-eQ-Eba" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G7x-Pe-JPb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-46.376811594202906" y="-950.22321428571422"/>
+            <point key="canvasLocation" x="-46.376811594202906" y="-956.25"/>
         </scene>
     </scenes>
 </document>
