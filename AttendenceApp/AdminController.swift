@@ -15,6 +15,7 @@ class AdminController{
     // Set up base Student Record
     func SetUpBaseStudent(){
         
+        print("Set Up Base Student function is executing...")
         var studentList: [Student] = []
         
         let studentOne: Student = Student(studentname: "Alan Tan", studentno: "S10111111A" , password: "11111111")
@@ -61,11 +62,12 @@ class AdminController{
                 print("Could not create student record. \(error), \(error.userInfo)")
             }
         }
-        
+        print("Set up Base Student function has finish execution")
     }
     
     func SetUpBaseMentor(){
         
+        print("Set Up Base Mentor function is executing...")
         var mentorList: [Mentor] = []
         
         let mentorOne: Mentor = Mentor(mentorname: "Zac Tan", mentorno: "T10111111Z" , password: "11111111")
@@ -95,8 +97,79 @@ class AdminController{
                 print("Could not create mentor record. \(error), \(error.userInfo)")
             }
         }
+        print("Set up Base Mentor Function has finish execution")
+    }
+    
+    func SetUpBaseLesson(){
+        
+        let appDelegate = (UIApplication.shared.delegate) as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        
+        let entity = NSEntityDescription.entity(forEntityName: "CDLesson", in: context)!
+        
+        let lesson = NSManagedObject(entity: entity, insertInto: context)
+        lesson.setValue("", forKey:"")
         
     }
+    
+    
+//    func AddMentorToLesson(lesson: Lesson, student: Student){
+//
+//        let appDelegate = (UIApplication.shared.delegate) as! AppDelegate
+//        let context = appDelegate.persistentContainer.viewContext
+//
+//        let messageEntity = NSEntityDescription.entity(forEntityName: "CDMessage", in: context)
+//
+//        let cdmessage = NSManagedObject(entity: messageEntity!, insertInto: context)
+//
+//        cdmessage.setValue(message.date, forKey: "date")
+//        cdmessage.setValue(message.isSender, forKey: "isSender")
+//        cdmessage.setValue(message.text, forKey: "text")
+//
+//
+//        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "CDContact")
+//        fetchRequest.predicate = NSPredicate(format: "lastname = %@", contact.lastName)
+//        do{
+//            let test = try context.fetch(fetchRequest)
+//            print("Added for \(test[0].value(forKey: "lastname") as! String)")
+//            let cdcontact = test[0]
+//            cdmessage.setValue(cdcontact, forKey: "Contact")
+//            try context.save()
+//
+//        }
+//        catch {
+//            print(error)
+//        }
+//    }
+//
+//    func AddStudentToLesson(lesson: Lesson, student: Student){
+//
+//        let appDelegate = (UIApplication.shared.delegate) as! AppDelegate
+//        let context = appDelegate.persistentContainer.viewContext
+//
+//        let messageEntity = NSEntityDescription.entity(forEntityName: "CDMessage", in: context)
+//
+//        let cdmessage = NSManagedObject(entity: messageEntity!, insertInto: context)
+//
+//        cdmessage.setValue(message.date, forKey: "date")
+//        cdmessage.setValue(message.isSender, forKey: "isSender")
+//        cdmessage.setValue(message.text, forKey: "text")
+//
+//
+//        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "CDContact")
+//        fetchRequest.predicate = NSPredicate(format: "lastname = %@", contact.lastName)
+//        do{
+//            let test = try context.fetch(fetchRequest)
+//            print("Added for \(test[0].value(forKey: "lastname") as! String)")
+//            let cdcontact = test[0]
+//            cdmessage.setValue(cdcontact, forKey: "Contact")
+//            try context.save()
+//
+//        }
+//        catch {
+//            print(error)
+//        }
+//    }
     
     
 }
