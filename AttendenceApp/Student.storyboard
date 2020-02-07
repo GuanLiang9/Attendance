@@ -7,6 +7,35 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Absent Log-->
+        <scene sceneID="Jb2-qY-qqX">
+            <objects>
+                <tableViewController id="6nh-gT-PhL" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="w7c-3n-7gt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="eLm-AS-UlO">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eLm-AS-UlO" id="tfn-dT-iDf">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="6nh-gT-PhL" id="Piz-tp-ji2"/>
+                            <outlet property="delegate" destination="6nh-gT-PhL" id="lI3-jS-tUi"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Absent Log" id="Ohs-e4-bfY"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KDB-tH-7qk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-20" y="-765"/>
+        </scene>
         <!--Enter Code-->
         <scene sceneID="iAp-OX-eTf">
             <objects>
@@ -28,12 +57,20 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="saJ-Gl-0pG">
-                                <rect key="frame" x="189" y="433" width="37" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="saJ-Gl-0pG">
+                                <rect key="frame" x="155" y="433" width="103" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Enter"/>
                                 <connections>
-                                    <action selector="btnEnter:" destination="IfP-qk-Gq2" eventType="touchUpInside" id="m5o-yY-Xfe"/>
+                                    <action selector="btnEnter:" destination="IfP-qk-Gq2" eventType="touchUpInside" id="570-ZQ-Zok"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1JH-3a-nHV">
+                                <rect key="frame" x="333" y="50" width="61" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Logout"/>
+                                <connections>
+                                    <action selector="btnLogout:" destination="IfP-qk-Gq2" eventType="touchUpInside" id="GpN-CB-ilc"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -41,9 +78,21 @@
                         <viewLayoutGuide key="safeArea" id="WuQ-Yg-63b"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Enter Code" id="meJ-S4-ZA9"/>
+                    <navigationItem key="navigationItem" id="LBE-cH-dwc">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="RX2-2w-5gV">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="5MX-oF-qDb">
+                                <rect key="frame" x="302" y="7" width="92" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Logout"/>
+                            </button>
+                            <connections>
+                                <action selector="btnLogout:" destination="IfP-qk-Gq2" id="aak-oH-GGD"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
-                        <outlet property="fldDisplay" destination="tkG-MA-lT5" id="vQt-Kb-r0w"/>
-                        <outlet property="txtInformation" destination="vpJ-I5-bL9" id="RTz-Qv-fjX"/>
+                        <outlet property="fldCode" destination="tkG-MA-lT5" id="pBm-TY-h7h"/>
+                        <outlet property="txtInformation" destination="vpJ-I5-bL9" id="yde-te-BrQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ifc-Lt-EGy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -54,6 +103,7 @@
         <scene sceneID="p4Q-dt-1uQ">
             <objects>
                 <tabBarController storyboardIdentifier="Student" id="KDC-IB-Wkn" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="SRk-6Q-Zhr"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lUf-W6-GiY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -61,6 +111,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="IfP-qk-Gq2" kind="relationship" relationship="viewControllers" id="rVZ-tp-3yo"/>
+                        <segue destination="6nh-gT-PhL" kind="relationship" relationship="viewControllers" id="Kkg-pI-CPg"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ajw-qb-O7o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
