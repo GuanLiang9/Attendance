@@ -27,6 +27,16 @@ class AdminMentorViewController: UIViewController {
     }
     
     @IBAction func resetMentorDBbtn(_ sender: Any) {
+        
+        let alertView = UIAlertController(title: "Confirm?", message: "Are you sure to reset the database??", preferredStyle: UIAlertController.Style.alert)
+        
+        alertView.addAction(UIAlertAction(title: "No", style: UIAlertAction.Style.default, handler: { (_) in print("User clicked No button") }))
+        alertView.addAction(UIAlertAction(title: "Yes", style: UIAlertAction.Style.default, handler: { (_) in self.resetAndPopulateMentorDB() }))
+        
+        self.present(alertView, animated: true, completion: nil)
+    }
+    
+    func resetAndPopulateMentorDB(){
         AdminMentorController().resetDB()
         adminController.SetUpBaseMentor()
     }
@@ -40,5 +50,12 @@ class AdminMentorViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    @IBAction func logoutBtn(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "Login") as
+            UIViewController
+        vc.modalPresentationStyle = .fullScreen // try without fullscreen
+        present(vc, animated: true, completion: nil)
+    }
+    
 }

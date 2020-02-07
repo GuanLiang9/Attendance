@@ -100,6 +100,10 @@ class LessonController {
             let result = try managedContext.fetch(fetchRequest)
             let lessonObj = result[0]
             
+            lessonObj.setValue(newLesson.lessonDate, forKey: "lessondate")
+            lessonObj.setValue(newLesson.lessonTime, forKey: "lessontime")
+            lessonObj.setValue(newLesson.Location, forKey: "location")
+            lessonObj.setValue(newLesson.modName, forKey: "modulename")
             lessonObj.setValue(newLesson.uniqueCode, forKey: "uniquecode")
             lessonObj.setValue(newLesson.codeTimeGen, forKey: "codetimegen")
             

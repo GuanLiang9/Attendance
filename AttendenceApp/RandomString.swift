@@ -9,6 +9,7 @@
 import UIKit
 
 class RandomStringController: UIViewController {
+    
 
     @IBOutlet weak var txtRandomCode: UILabel!
     
@@ -16,15 +17,7 @@ class RandomStringController: UIViewController {
     
     var rowSelected: Int!
     var parentController: ShowTimetableViewController!
-    
-    
-    @IBAction func logoutBtn(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "Login") as
-            UIViewController
-        vc.modalPresentationStyle = .fullScreen // try without fullscreen
-        present(vc, animated: true, completion: nil)
-    }
+
     
     @IBAction func codeGenerateBtn(_ sender: UIButton) {
         // Date function to retrieve time when mentor generate the code, formatted in
@@ -45,11 +38,7 @@ class RandomStringController: UIViewController {
         // Retrieve value of random code
         let randomCode = txtRandomCode.text!
         let lesson = parentController.lessonList[rowSelected]
-        let lessonDate = lesson.lessonDate
-        let lessonTime = lesson.lessonTime
-        let lessonLocation = lesson.Location
-        let lessonModName = lesson.modName
-        LessonController().updateLesson(modulename: lesson.modName, newLesson: Lesson(lessondate: lessonDate, lessontime: lessonTime, location: lessonLocation, modname: lessonModName, uniquecode: randomCode, codetimegen: time))
+        LessonController().updateLesson(modulename: lesson.modName, newLesson: Lesson(lessondate: lesson.lessonDate, lessontime: lesson.lessonTime, location: lesson.Location, modname: lesson.modName, uniquecode: randomCode, codetimegen: time))
         displayAlert()
     }
     
@@ -57,5 +46,13 @@ class RandomStringController: UIViewController {
         let alertView = UIAlertController(title:"Success",message: "Code has been successfully generated and updated in the corresponding lesson record",preferredStyle: UIAlertController.Style.alert)
         alertView.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: {_ in}))
         self.present(alertView,animated: true,completion: nil)
+    }
+    
+    @IBAction func logoutBtn(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "Login") as
+            UIViewController
+        vc.modalPresentationStyle = .fullScreen // try without fullscreen
+        present(vc, animated: true, completion: nil)
     }
 }
