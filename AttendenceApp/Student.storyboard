@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Absent Log-->
+        <!--Attendance Log-->
         <scene sceneID="Jb2-qY-qqX">
             <objects>
                 <tableViewController id="6nh-gT-PhL" customClass="AbsentLogViewController" customModule="myAttendance" customModuleProvider="target" sceneMemberID="viewController">
@@ -30,7 +30,7 @@
                             <outlet property="delegate" destination="6nh-gT-PhL" id="lI3-jS-tUi"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Absent Log" id="Ohs-e4-bfY"/>
+                    <tabBarItem key="tabBarItem" title="Attendance Log" image="person.badge.plus.fill" catalog="system" id="Ohs-e4-bfY"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KDB-tH-7qk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -70,7 +70,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="WuQ-Yg-63b"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Enter Code" id="meJ-S4-ZA9"/>
+                    <tabBarItem key="tabBarItem" title="Enter Code" image="square.and.pencil" catalog="system" id="meJ-S4-ZA9"/>
                     <navigationItem key="navigationItem" id="LBE-cH-dwc">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="RX2-2w-5gV">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="5MX-oF-qDb">
@@ -111,4 +111,8 @@
             <point key="canvasLocation" x="-884" y="-132"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="person.badge.plus.fill" catalog="system" width="64" height="58"/>
+        <image name="square.and.pencil" catalog="system" width="64" height="58"/>
+    </resources>
 </document>

@@ -70,23 +70,30 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8xD-KO-ntj">
-                                <rect key="frame" x="141" y="666" width="132" height="36"/>
+                                <rect key="frame" x="75" y="627" width="265" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.28338981715916078" green="0.5035880318471524" blue="0.79942519430051817" alpha="0.84705882352941175" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Generate Code"/>
+                                <state key="normal" title="Generate Code">
+                                    <color key="titleColor" systemColor="secondarySystemBackgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="codeGenerateBtn:" destination="kMi-0Y-9eI" eventType="touchUpInside" id="fuE-DH-8ZE"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Random Code" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1KL-Wt-5Yq">
-                                <rect key="frame" x="0.0" y="551" width="414" height="33"/>
+                                <rect key="frame" x="0.0" y="458" width="414" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="phone" translatesAutoresizingMaskIntoConstraints="NO" id="0Lh-QK-Qew">
+                                <rect key="frame" x="87" y="145" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The code is:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q4c-dE-O4T">
-                                <rect key="frame" x="0.0" y="430" width="414" height="36"/>
+                                <rect key="frame" x="0.0" y="335" width="414" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <nil key="textColor"/>
@@ -104,6 +111,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="touch" destination="8xD-KO-ntj" id="IeT-X5-qBh"/>
                         <outlet property="txtRandomCode" destination="1KL-Wt-5Yq" id="34f-Lz-3SK"/>
                     </connections>
                 </viewController>
@@ -130,4 +138,7 @@
             <point key="canvasLocation" x="-4.3478260869565224" y="-956.25"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="phone" width="256" height="256"/>
+    </resources>
 </document>
