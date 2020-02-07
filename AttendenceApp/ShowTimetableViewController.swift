@@ -11,6 +11,8 @@ import UIKit
 
 class ShowTimetableViewController: UITableViewController {
     
+    var appDelegate = UIApplication.shared.delegate as! AppDelegate
+    
     var lessonList:[Lesson] = []
     
     override func viewDidLoad() {
@@ -52,6 +54,7 @@ class ShowTimetableViewController: UITableViewController {
     }
     
     @IBAction func logoutBtn(_ sender: Any) {
+        appDelegate.userID = ""
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "Login") as
             UIViewController
