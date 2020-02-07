@@ -18,7 +18,7 @@ class AdminController{
         print("Set Up Base Student function is executing...")
         var studentList: [Student] = []
         let studentOne: Student = Student(studentname: "Alan Tan", studentno: "S10111111A" , password: "11111111")
-        let studentTwo: Student = Student(studentname: "Brian Lim", studentno: "S10122222 " , password: "22222222")
+        let studentTwo: Student = Student(studentname: "Brian Lim", studentno: "S10122222B" , password: "22222222")
         let studentThree: Student = Student(studentname: "Champion Quek", studentno: "S10133333C" , password: "33333333")
         let studentFour: Student = Student(studentname: "Daniel Tan", studentno: "S10144444D" , password: "44444444")
         let studentFive: Student = Student(studentname: "Edwin Tan", studentno: "S10155555E" , password: "55555555")
@@ -101,14 +101,32 @@ class AdminController{
     
     func SetUpBaseLesson(){
         
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let date = dateFormatter.date(from: "2020-02-15")
+
+        print("\(date)")
+        
         let appDelegate = (UIApplication.shared.delegate) as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
-        
+         
         let entity = NSEntityDescription.entity(forEntityName: "CDLesson", in: context)!
         
         let lesson = NSManagedObject(entity: entity, insertInto: context)
-        lesson.setValue("", forKey:"")
+        lesson.setValue(date, forKey:"lessondate")
+        lesson.setValue("4:00-6:00", forKey:"lessontime")
+        lesson.setValue("1.333498666,103.772830242", forKey:"location")
+        lesson.setValue("", forKey:"uniquecode")
+        lesson.setValue("", forKey:"codetimegen")
+        lesson.setValue("MAD2 P01", forKey:"modulename")
         
+        do{
+            try context.save()
+            print("Lesson is successfully created!")
+        }
+        catch let error as NSError{
+            print("Could not create Lesson record. \(error), \(error.userInfo)")
+        }
     }
     
     

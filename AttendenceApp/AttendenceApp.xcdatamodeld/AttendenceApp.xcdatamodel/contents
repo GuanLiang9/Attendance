@@ -10,7 +10,6 @@
     <entity name="CDLesson" representedClassName="CDLesson" syncable="YES" codeGenerationType="class">
         <attribute name="codetimegen" optional="YES" attributeType="String"/>
         <attribute name="lessondate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
-        <attribute name="lessonday" optional="YES" attributeType="String"/>
         <attribute name="lessontime" optional="YES" attributeType="String"/>
         <attribute name="location" optional="YES" attributeType="String"/>
         <attribute name="modulename" optional="YES" attributeType="String"/>
@@ -32,8 +31,8 @@
     </entity>
     <elements>
         <element name="CDAttendanceLog" positionX="299.75390625" positionY="203.9609375" width="128" height="118"/>
-        <element name="CDLesson" positionX="70.33203125" positionY="108.5625" width="128" height="178"/>
+        <element name="CDLesson" positionX="70.33203125" positionY="108.5625" width="128" height="163"/>
         <element name="CDMentor" positionX="62.4375" positionY="-103.328125" width="128" height="103"/>
-        <element name="CDStudent" positionX="-139.37109375" positionY="198.51953125" width="128" height="103"/>
+        <element name="CDStudent" positionX="-162.22265625" positionY="168.52734375" width="128" height="103"/>
     </elements>
 </model>

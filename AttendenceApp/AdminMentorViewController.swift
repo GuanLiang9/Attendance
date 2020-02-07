@@ -1,14 +1,14 @@
 //
-//  AdminViewController.swift
+//  AdminMentorViewController.swift
 //  AttendenceApp
 //
-//  Created by ren kee on 5/2/20.
+//  Created by MAD2_P02 on 7/2/20.
 //  Copyright © 2020 MAD2_P02. All rights reserved.
 //
 
 import UIKit
 
-class AdminViewController: UIViewController {
+class AdminMentorViewController: UIViewController {
 
     var appDelegate = UIApplication.shared.delegate as! AppDelegate
     let adminController = AdminController()
@@ -18,19 +18,18 @@ class AdminViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-
-    @IBAction func viewStudentbtn(_ sender: Any) {
-    }
     
     @IBAction func viewMentorbtn(_ sender: Any) {
     }
     
     
-    @IBAction func resetDBbtn(_ sender: Any) {
-        adminController.SetUpBaseStudent()
-        adminController.SetUpBaseMentor()
+    @IBAction func addMentorbtn(_ sender: Any) {
     }
     
+    @IBAction func resetMentorDBbtn(_ sender: Any) {
+        AdminMentorController().resetDB()
+        adminController.SetUpBaseMentor()
+    }
     
     /*
     // MARK: - Navigation
