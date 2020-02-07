@@ -104,6 +104,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="touch" destination="8xD-KO-ntj" id="IeT-X5-qBh"/>
                         <outlet property="txtRandomCode" destination="1KL-Wt-5Yq" id="34f-Lz-3SK"/>
                     </connections>
                 </viewController>

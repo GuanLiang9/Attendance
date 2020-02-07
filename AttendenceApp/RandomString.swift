@@ -12,12 +12,25 @@ class RandomStringController: UIViewController {
     
 
     @IBOutlet weak var txtRandomCode: UILabel!
+    @IBOutlet weak var touch: UIButton!
     
     var appDelegate = UIApplication.shared.delegate as! AppDelegate
     
     var rowSelected: Int!
     var parentController: ShowTimetableViewController!
-
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let lesson = parentController.lessonList[rowSelected]
+        if (lesson.uniqueCode != ""){
+            self.touch.isEnabled = false
+        }
+        else
+        {
+            self.touch.isEnabled = true
+        }
+    }
     
     @IBAction func codeGenerateBtn(_ sender: UIButton) {
         // Date function to retrieve time when mentor generate the code, formatted in
