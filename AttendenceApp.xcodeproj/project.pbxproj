@@ -24,6 +24,7 @@
 		87C640AD23EAB61500CD75A8 /* Admin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87C640AC23EAB61500CD75A8 /* Admin.storyboard */; };
 		87E4A3DA23EAB0EC0059A875 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E4A3D923EAB0EC0059A875 /* Student.swift */; };
 		87E4A3DC23EAB0F50059A875 /* Mentor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E4A3DB23EAB0F50059A875 /* Mentor.swift */; };
+		87EFD32023ED1FB700342AF2 /* AbsentLogTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EFD31F23ED1FB700342AF2 /* AbsentLogTableViewController.swift */; };
 		87F367C723ECFC8200D3FD06 /* AdminStudentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F367C623ECFC8200D3FD06 /* AdminStudentViewController.swift */; };
 		87F367C923ED015F00D3FD06 /* AdminMentorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F367C823ED015F00D3FD06 /* AdminMentorViewController.swift */; };
 		87F367CB23ED016900D3FD06 /* AdminLessonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F367CA23ED016900D3FD06 /* AdminLessonViewController.swift */; };
@@ -55,6 +56,7 @@
 		87C640AC23EAB61500CD75A8 /* Admin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Admin.storyboard; sourceTree = "<group>"; };
 		87E4A3D923EAB0EC0059A875 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		87E4A3DB23EAB0F50059A875 /* Mentor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mentor.swift; sourceTree = "<group>"; };
+		87EFD31F23ED1FB700342AF2 /* AbsentLogTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbsentLogTableViewController.swift; sourceTree = "<group>"; };
 		87F367C623ECFC8200D3FD06 /* AdminStudentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminStudentViewController.swift; sourceTree = "<group>"; };
 		87F367C823ED015F00D3FD06 /* AdminMentorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminMentorViewController.swift; sourceTree = "<group>"; };
 		87F367CA23ED016900D3FD06 /* AdminLessonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminLessonViewController.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				87F367CA23ED016900D3FD06 /* AdminLessonViewController.swift */,
 				87F367CC23ED14E400D3FD06 /* AdminStudentController.swift */,
 				87F367CE23ED158B00D3FD06 /* AdminMentorController.swift */,
+				87EFD31F23ED1FB700342AF2 /* AbsentLogTableViewController.swift */,
 			);
 			path = AttendenceApp;
 			sourceTree = "<group>";
@@ -211,6 +214,7 @@
 				87B9556123E80C3C00BFD671 /* AppDelegate.swift in Sources */,
 				87F367CF23ED158B00D3FD06 /* AdminMentorController.swift in Sources */,
 				87B9556B23E80C3C00BFD671 /* AttendenceApp.xcdatamodeld in Sources */,
+				87EFD32023ED1FB700342AF2 /* AbsentLogTableViewController.swift in Sources */,
 				87F367C723ECFC8200D3FD06 /* AdminStudentViewController.swift in Sources */,
 				87F367CB23ED016900D3FD06 /* AdminLessonViewController.swift in Sources */,
 				8729530223EC0347003C9CC0 /* CLLocationManagerDelegate.swift in Sources */,

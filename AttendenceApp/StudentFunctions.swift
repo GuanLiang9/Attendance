@@ -41,37 +41,48 @@ class StudentFunctions: UIViewController {
             
             self.txtInformation.text = ("\(location), \(time)") ;
                 
+                
             //Compare the time, location and code of the student entered
             let appDelegate = (UIApplication.shared.delegate) as! AppDelegate
             let managedContext = appDelegate.persistentContainer.viewContext
             let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "CDLesson")
+                
             let searchString = self.fldCode.text
             let searchString2 = time
             let searchString3 = location
 
 
-            fetchRequest.predicate = NSPredicate(format:"studentID = %@", searchString!)
+            fetchRequest.predicate = NSPredicate(format:"uniquecode = %@", searchString!)
                 do {
                     let result = try managedContext.fetch(fetchRequest)
-                    if result.count > 0
-                    {
-                        let code = (result[0] as AnyObject).value(forKey: "uniquecode") as! String
-                        let time = (result[0] as AnyObject).value(forKey: "lessontime") as! String
-                        let location = (result[0] as AnyObject).value(forKey: "location") as! String
-
-                        if (searchString == code && searchString2 == time && searchString3 == location )
+                    if result.count > 0 {
+                        let obj = result[0]
+                        
+                        let code = obj.value(forKey: "uniquecode") as! String
+                        let time = obj.value(forKey: "codetimegen") as! String
+                        let location = obj.value(forKey: "location") as! String
+                        
+                        // include if condition to check for user attendance log validation
+                        if (searchString == code && searchString2 == time && searchString3 == location)
                         {
-                            guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+                           
+                            let entity = NSEntityDescription.entity(forEntityName: "CDAttendanceLog", in: managedContext)!
                             
-                            let context = appDelegate.persistentContainer.viewContext
-                            let retrieveRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "CDAttendance")
-                            retrieveRequest.predicate = NSPredicate(format: "studentID = %@", "Doe-2")
+                            let attendancelog = NSManagedObject(entity: entity, insertInto: managedContext)
                             
-                            do {
-                                let result = try context.fetch(retrieveRequest)
-                                let obj = result[0] as! NSManagedObject
-                                       
-                                obj.setValue(true, forKeyPath: "attendanceStatus")
+                            attendancelog.setValue(true , forKey: "attendanceStatus")
+                            attendancelog.setValue("", forKey: "studentID")
+                            attendancelog.setValue("", forKey: "studentName")
+                            attendancelog.setValue(searchString2, forKey: "timelogged")
+                            attendancelog.setValue(searchString, forKey: "uniqueCode")
+                            
+                            do{
+                                try managedContext.save()
+                                print("Successfully logged the attendance for this user")
+                            }
+                            
+                            catch let error as NSError{
+                                print("Could not save this. \(error), \(error.userInfo)")
                             }
                             self.correctCode()
                         }
@@ -79,9 +90,11 @@ class StudentFunctions: UIViewController {
                         {
                             self.errorCode()
                         }
+                        
                     }
-                    else
-                    {
+                    else{
+                        
+                        // show invalid code entered error
                         self.errorCode()
                     }
                 } catch let error as NSError {
