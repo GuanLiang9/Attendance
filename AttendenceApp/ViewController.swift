@@ -37,9 +37,7 @@ class ViewController: UIViewController {
                 let password = (result[0] as AnyObject).value(forKey: "password") as! String
                 if (searchString == username && searchstring2 == password)
                 {
-                    
-                    let targetVC = ShowTimetableViewController(nibName: "ShowTimetableViewController", bundle: nil)
-                    
+                    appDelegate.userID = searchString!
                     let storyboard = UIStoryboard(name: "Teacher", bundle: nil)
                     let vc = storyboard.instantiateViewController(withIdentifier: "Mentor") as
                         UIViewController
@@ -75,6 +73,7 @@ class ViewController: UIViewController {
                 let password = (result[0] as AnyObject).value(forKey: "password") as! String
                 if (searchString == username && searchstring2 == password)
                 {
+                    appDelegate.userID = searchString!
                     let storyboard = UIStoryboard(name: "Student", bundle: nil)
                     let vc = storyboard.instantiateViewController(withIdentifier: "Student") as
                         UIViewController

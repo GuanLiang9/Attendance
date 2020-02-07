@@ -62,6 +62,7 @@ class RandomStringController: UIViewController {
     }
     
     @IBAction func logoutBtn(_ sender: Any) {
+        appDelegate.userID = ""
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "Login") as
             UIViewController
