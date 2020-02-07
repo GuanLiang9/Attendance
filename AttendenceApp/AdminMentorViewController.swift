@@ -27,6 +27,16 @@ class AdminMentorViewController: UIViewController {
     }
     
     @IBAction func resetMentorDBbtn(_ sender: Any) {
+        
+        let alertView = UIAlertController(title: "Confirm?", message: "Are you sure to reset the database??", preferredStyle: UIAlertController.Style.alert)
+        
+        alertView.addAction(UIAlertAction(title: "No", style: UIAlertAction.Style.default, handler: { (_) in print("User clicked No button") }))
+        alertView.addAction(UIAlertAction(title: "Yes", style: UIAlertAction.Style.default, handler: { (_) in self.resetAndPopulateMentorDB() }))
+        
+        self.present(alertView, animated: true, completion: nil)
+    }
+    
+    func resetAndPopulateMentorDB(){
         AdminMentorController().resetDB()
         adminController.SetUpBaseMentor()
     }

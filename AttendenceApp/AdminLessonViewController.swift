@@ -28,13 +28,25 @@ class AdminLessonViewController: UIViewController {
     
     
     @IBAction func resetLessonDBbtn(_ sender: Any) {
+        
+        let alertView = UIAlertController(title: "Confirm?", message: "Are you sure to reset the database??", preferredStyle: UIAlertController.Style.alert)
+        
+        alertView.addAction(UIAlertAction(title: "No", style: UIAlertAction.Style.default, handler: { (_) in print("User clicked No button") }))
+        alertView.addAction(UIAlertAction(title: "Yes", style: UIAlertAction.Style.default, handler: { (_) in self.resetAndPopulateLessonDB() }))
+        
+        self.present(alertView, animated: true, completion: nil)
+    }
+    
+    func resetAndPopulateLessonDB(){
         // reset the database
         LessonController().resetDB()
         //set up base record
         adminController.SetUpBaseLesson()
         LessonController().assignMentorToLesson()
-//        LessonController().assignmentStudentToLesson()
+        //LessonController().assignmentStudentToLesson()
     }
+    
+    
     
     
     /*
