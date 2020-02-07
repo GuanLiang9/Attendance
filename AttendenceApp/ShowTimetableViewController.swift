@@ -30,7 +30,6 @@ class ShowTimetableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return lessonList.count
-        //return appDelegate.contactList.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
@@ -43,6 +42,14 @@ class ShowTimetableViewController: UITableViewController {
         return cell
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "CodeGen") {
+            let indexPath : IndexPath = self.tableView.indexPathForSelectedRow! as IndexPath
+            let child = segue.destination as! RandomStringController
+            child.rowSelected = indexPath.row
+            child.parentController = self
+        }
+    }
     
     @IBAction func logoutBtn(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
