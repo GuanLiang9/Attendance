@@ -60,7 +60,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="rQx-eD-zO0"/>
                     </view>
-                    <navigationItem key="navigationItem" id="NgP-Rl-Hf5"/>
+                    <navigationItem key="navigationItem" id="NgP-Rl-Hf5">
+                        <barButtonItem key="rightBarButtonItem" title="Logout" id="8j0-0C-GPm">
+                            <connections>
+                                <action selector="logoutBtn:" destination="Dmi-zF-Ie3" id="wgP-U9-RY5"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qQD-k7-zwC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -182,7 +188,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="cIV-0V-zBp"/>
                     </view>
-                    <navigationItem key="navigationItem" id="3bi-jM-gep"/>
+                    <navigationItem key="navigationItem" id="3bi-jM-gep">
+                        <barButtonItem key="rightBarButtonItem" title="Logout" id="5r3-Px-imE">
+                            <connections>
+                                <action selector="logoutBtn:" destination="iuW-Hp-Aeb" id="mau-ou-3wd"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j8h-Qx-qU8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -324,7 +336,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="UMx-Z8-J41"/>
                     </view>
-                    <navigationItem key="navigationItem" id="8CO-mD-bxN"/>
+                    <navigationItem key="navigationItem" id="8CO-mD-bxN">
+                        <barButtonItem key="rightBarButtonItem" title="Logout" id="0qL-yt-Sh7">
+                            <connections>
+                                <action selector="logoutBtn:" destination="zEs-uO-Qbq" id="UYG-Fs-KUU"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pLC-Fo-bFa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

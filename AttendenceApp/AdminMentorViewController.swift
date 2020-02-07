@@ -50,5 +50,12 @@ class AdminMentorViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    @IBAction func logoutBtn(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "Login") as
+            UIViewController
+        vc.modalPresentationStyle = .fullScreen // try without fullscreen
+        present(vc, animated: true, completion: nil)
+    }
+    
 }
