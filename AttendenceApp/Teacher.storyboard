@@ -64,7 +64,7 @@
         <!--Generate Code-->
         <scene sceneID="r1F-62-wQB">
             <objects>
-                <viewController id="kMi-0Y-9eI" customClass="RandomStringController" customModule="myAttendance" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CodeGen" id="kMi-0Y-9eI" customClass="RandomStringController" customModule="myAttendance" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HQ2-AK-43n">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -13,7 +13,6 @@ import CoreData
 class StudentFunctions: UIViewController {
     let locationDelegate = LocationDelegate()
     var latestLocation: CLLocation? = nil
-    
     let locationManager: CLLocationManager = {
     $0.requestWhenInUseAuthorization()
     $0.desiredAccuracy = kCLLocationAccuracyBest
@@ -62,9 +61,21 @@ class StudentFunctions: UIViewController {
 
                         if (searchString == code && searchString2 == time && searchString3 == location )
                         {
+                            guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+                            
+                            let context = appDelegate.persistentContainer.viewContext
+                            let retrieveRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "CDAttendance")
+                            retrieveRequest.predicate = NSPredicate(format: "studentID = %@", "Doe-2")
+                            
+                            do {
+                                let result = try context.fetch(retrieveRequest)
+                                let obj = result[0] as! NSManagedObject
+                                       
+                                obj.setValue(true, forKeyPath: "attendanceStatus")
+                            }
                             self.correctCode()
                         }
-                        else if (searchString == code && searchString2 == time && searchString3 == location)
+                        else if (searchString == code || searchString2 == time || searchString3 == location)
                         {
                             self.errorCode()
                         }
