@@ -9,9 +9,12 @@
 import UIKit
 
 class AbsentLogTableViewController: UITableViewController {
+    var appDelegate = UIApplication.shared.delegate as! AppDelegate
+    var studentList:[Student] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        studentList = StudentController().retrieveAllStudent()
         self.tableView.reloadData() //refresh data
 
         // Uncomment the following line to preserve selection between presentations
@@ -33,15 +36,17 @@ class AbsentLogTableViewController: UITableViewController {
         return 0
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
+        let cell = tableView.dequeueReusableCell(withIdentifier: "AbsentCell", for: indexPath)
+        let student = studentList[indexPath.row]
+        cell.textLabel!.text = "\(student.studentName)"
+        cell.detailTextLabel!.text = "\(student.studentNo)"
+        //         Configure the cell...
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.

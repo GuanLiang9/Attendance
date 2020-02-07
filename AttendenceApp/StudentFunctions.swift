@@ -22,7 +22,6 @@ class StudentFunctions: UIViewController {
     }(CLLocationManager())
         
     @IBOutlet weak var fldCode: UITextField!
-    @IBOutlet weak var txtInformation: UILabel!
 
     @IBAction func btnEnter(_ sender: Any) {
         
@@ -36,10 +35,9 @@ class StudentFunctions: UIViewController {
             let location = ("\(lat), \(long)")
             //Time
             let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "HH:mm"
+            dateFormatter.dateFormat = "HHmm"
             let time = dateFormatter.string(from: Date())
             
-            self.txtInformation.text = ("\(location), \(time)") ;
                 
                 
             //Compare the time, location and code of the student entered
@@ -50,8 +48,7 @@ class StudentFunctions: UIViewController {
             let searchString = self.fldCode.text
             let searchString2 = time
             let searchString3 = location
-
-
+            
             fetchRequest.predicate = NSPredicate(format:"uniquecode = %@", searchString!)
                 do {
                     let result = try managedContext.fetch(fetchRequest)
@@ -63,7 +60,7 @@ class StudentFunctions: UIViewController {
                         let location = obj.value(forKey: "location") as! String
                         
                         // include if condition to check for user attendance log validation
-                        if (searchString == code && searchString2 == time && searchString3 == location)
+                        if (searchString == code && searchString2 == time )
                         {
                            
                             let entity = NSEntityDescription.entity(forEntityName: "CDAttendanceLog", in: managedContext)!
@@ -71,8 +68,6 @@ class StudentFunctions: UIViewController {
                             let attendancelog = NSManagedObject(entity: entity, insertInto: managedContext)
                             
                             attendancelog.setValue(true , forKey: "attendanceStatus")
-                            attendancelog.setValue("", forKey: "studentID")
-                            attendancelog.setValue("", forKey: "studentName")
                             attendancelog.setValue(searchString2, forKey: "timelogged")
                             attendancelog.setValue(searchString, forKey: "uniqueCode")
                             

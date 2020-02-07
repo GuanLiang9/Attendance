@@ -115,7 +115,7 @@ class AdminController{
         let lesson = NSManagedObject(entity: entity, insertInto: context)
         lesson.setValue(date, forKey:"lessondate")
         lesson.setValue("4:00-6:00", forKey:"lessontime")
-        lesson.setValue("1.333498666,103.772830242", forKey:"location")
+        lesson.setValue("Lat: 1.33374100, Long: 103.77477700", forKey:"location")
         lesson.setValue("", forKey:"uniquecode")
         lesson.setValue("", forKey:"codetimegen")
         lesson.setValue("MAD2 P01", forKey:"modulename")
