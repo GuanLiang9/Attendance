@@ -33,6 +33,7 @@ class AdminLessonViewController: UIViewController {
         //set up base record
         adminController.SetUpBaseLesson()
         LessonController().assignMentorToLesson()
+//        LessonController().assignmentStudentToLesson()
     }
     
     
