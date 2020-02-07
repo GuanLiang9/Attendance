@@ -24,7 +24,7 @@ class ShowStudentViewController: UITableViewController {
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+         self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -57,6 +57,20 @@ class ShowStudentViewController: UITableViewController {
     }
     
 
+    override func tableView(_ tableView: UITableView, commit editingStyle:
+    UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+    if editingStyle == UITableViewCell.EditingStyle.delete {
+        //contactList.remove(at: indexPath.row)
+        //appDelegate.contactList.remove(at: indexPath.row)
+        let student = studentList[indexPath.row]
+        
+        studentList.remove(at: indexPath.row)
+        AdminStudentController().deleteStudent(studentno: student.studentNo)
+        tableView.deleteRows(at: [indexPath as IndexPath],
+                             with: UITableView.RowAnimation.fade)
+    }
+    }
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

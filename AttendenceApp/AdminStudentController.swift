@@ -68,7 +68,25 @@ class AdminStudentController{
         
     }
     
-    
-    
-    
+    func deleteStudent(studentno: String){
+        
+        let appDelegate = (UIApplication.shared.delegate) as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "CDStudent")
+        
+        fetchRequest.predicate = NSPredicate(format: "studentID = %@", studentno)
+        
+        do {
+            let returnstudent = try context.fetch(fetchRequest)
+            let obj = returnstudent[0]
+            context.delete(obj)
+            print("Student \(obj.value(forKey: "studentName")) with student number \(obj.value(forKey: "studentID")) is Deleted")
+            try context.save()
+        }
+        
+        catch let error as NSError{
+            print("Could not fetch. \(error), \(error.userInfo)")
+        }
+        
+    }
 }
