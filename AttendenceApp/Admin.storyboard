@@ -121,7 +121,7 @@
         <scene sceneID="oAT-R3-HW4">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="27Y-Je-vyd" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Student" id="qlf-Xt-rvF"/>
+                    <tabBarItem key="tabBarItem" title="Student" image="person.crop.rectangle" catalog="system" landscapeImage="studenticon" selectedImage="person.crop.rectangle" id="qlf-Xt-rvF"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dIk-Yt-ESZ">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -269,7 +269,7 @@
         <scene sceneID="eBo-Ry-hG6">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8ZO-u0-hMM" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Mentor" id="zfe-4s-Eqa"/>
+                    <tabBarItem key="tabBarItem" title="Mentor" image="person.2" catalog="system" selectedImage="person.2" id="zfe-4s-Eqa"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1Rj-kR-B7r">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -397,7 +397,7 @@
         <scene sceneID="kgj-gd-KoB">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NB0-mp-qeE" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Lesson" id="U6q-h5-DAU"/>
+                    <tabBarItem key="tabBarItem" title="Lesson" image="calendar" catalog="system" selectedImage="calendar" id="U6q-h5-DAU"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="v7q-6Z-IGL">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -413,4 +413,10 @@
             <point key="canvasLocation" x="1061" y="1353"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="calendar" catalog="system" width="64" height="54"/>
+        <image name="person.2" catalog="system" width="64" height="40"/>
+        <image name="person.crop.rectangle" catalog="system" width="64" height="48"/>
+        <image name="studenticon" width="512" height="512"/>
+    </resources>
 </document>
