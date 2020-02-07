@@ -1,14 +1,14 @@
 //
-//  AdminViewController.swift
+//  AdminLessonViewController.swift
 //  AttendenceApp
 //
-//  Created by ren kee on 5/2/20.
+//  Created by MAD2_P02 on 7/2/20.
 //  Copyright © 2020 MAD2_P02. All rights reserved.
 //
 
 import UIKit
 
-class AdminViewController: UIViewController {
+class AdminLessonViewController: UIViewController {
 
     var appDelegate = UIApplication.shared.delegate as! AppDelegate
     let adminController = AdminController()
@@ -18,17 +18,22 @@ class AdminViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-
-    @IBAction func viewStudentbtn(_ sender: Any) {
-    }
     
-    @IBAction func viewMentorbtn(_ sender: Any) {
+    @IBAction func viewLessonbtn(_ sender: Any) {
     }
     
     
-    @IBAction func resetDBbtn(_ sender: Any) {
-        adminController.SetUpBaseStudent()
-        adminController.SetUpBaseMentor()
+    @IBAction func addLessonbtn(_ sender: Any) {
+    }
+    
+    
+    @IBAction func resetLessonDBbtn(_ sender: Any) {
+        // reset the database
+        LessonController().resetDB()
+        //set up base record
+        adminController.SetUpBaseLesson()
+        LessonController().assignMentorToLesson()
+//        LessonController().assignmentStudentToLesson()
     }
     
     

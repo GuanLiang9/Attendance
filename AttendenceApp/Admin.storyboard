@@ -1,49 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="27Y-Je-vyd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gMM-5N-PJP">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Admin View Controller-->
+        <!--Admin Student View Controller-->
         <scene sceneID="28v-cN-Zye">
             <objects>
-                <viewController storyboardIdentifier="Admin" id="Dmi-zF-Ie3" customClass="AdminViewController" customModule="myAttendance" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Dmi-zF-Ie3" customClass="AdminStudentViewController" customModule="myAttendance" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="c7v-a4-fqi">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Admin Page" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jJa-X1-UmF">
-                                <rect key="frame" x="112" y="118" width="190" height="45"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Student Record" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jJa-X1-UmF">
+                                <rect key="frame" x="84" y="140" width="246" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="37"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D9J-lw-FD2">
-                                <rect key="frame" x="109" y="387" width="197" height="75"/>
+                                <rect key="frame" x="109" y="393" width="197" height="75"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Mentor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Add Student"/>
                                 <connections>
-                                    <action selector="viewMentorbtn:" destination="Dmi-zF-Ie3" eventType="touchUpInside" id="ibI-HS-oHe"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HeX-BC-bff">
-                                <rect key="frame" x="109" y="507" width="197" height="75"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Reset to Default"/>
-                                <connections>
-                                    <action selector="resetDBbtn:" destination="Dmi-zF-Ie3" eventType="touchUpInside" id="XkZ-ja-F8E"/>
+                                    <action selector="addStudentbtn:" destination="Dmi-zF-Ie3" eventType="touchUpInside" id="ISO-K5-MWj"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="beU-R1-YuS">
                                 <rect key="frame" x="109" y="279" width="197" height="75"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Student"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="View / Edit Student"/>
                                 <connections>
-                                    <action selector="viewStudentbtn:" destination="Dmi-zF-Ie3" eventType="touchUpInside" id="bgq-uE-Lfo"/>
+                                    <action selector="viewStudentbtn:" destination="Dmi-zF-Ie3" eventType="touchUpInside" id="cQe-0w-q5g"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HeX-BC-bff">
+                                <rect key="frame" x="140" y="549" width="135" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Reset to Default"/>
+                                <connections>
+                                    <action selector="resetStudentDBbtn:" destination="Dmi-zF-Ie3" eventType="touchUpInside" id="Trp-9S-CYU"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -54,12 +56,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qQD-k7-zwC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1060.8695652173915" y="-38.169642857142854"/>
+            <point key="canvasLocation" x="1971.0144927536232" y="-38.169642857142854"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Student-->
         <scene sceneID="oAT-R3-HW4">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="27Y-Je-vyd" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Student" id="qlf-Xt-rvF"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dIk-Yt-ESZ">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -72,7 +75,166 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3yE-BC-WoP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1060.8695652173915" y="-38.169642857142854"/>
+        </scene>
+        <!--Admin Mentor View Controller-->
+        <scene sceneID="V2G-3S-TM4">
+            <objects>
+                <viewController id="iuW-Hp-Aeb" customClass="AdminMentorViewController" customModule="myAttendance" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZHd-9I-4wm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mentor Record" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="obf-co-C1r">
+                                <rect key="frame" x="90" y="142" width="234" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="37"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WnA-HG-9bU">
+                                <rect key="frame" x="109" y="279" width="197" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="View / Edit Mentor"/>
+                                <connections>
+                                    <action selector="viewMentorbtn:" destination="iuW-Hp-Aeb" eventType="touchUpInside" id="lES-Gv-ES3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OPf-h2-bJi">
+                                <rect key="frame" x="109" y="389" width="197" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Add Mentor"/>
+                                <connections>
+                                    <action selector="addMentorbtn:" destination="iuW-Hp-Aeb" eventType="touchUpInside" id="11f-oa-qpW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SL0-W9-9fA">
+                                <rect key="frame" x="140" y="547" width="135" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Reset to Default"/>
+                                <connections>
+                                    <action selector="resetMentorDBbtn:" destination="iuW-Hp-Aeb" eventType="touchUpInside" id="lI9-Te-9WW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="cIV-0V-zBp"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="3bi-jM-gep"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j8h-Qx-qU8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1971" y="642"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="QnN-fQ-1nF">
+            <objects>
+                <tabBarController storyboardIdentifier="Admin" automaticallyAdjustsScrollViewInsets="NO" id="gMM-5N-PJP" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Bkk-Mj-FX8">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="27Y-Je-vyd" kind="relationship" relationship="viewControllers" id="Pyr-5I-Lum"/>
+                        <segue destination="8ZO-u0-hMM" kind="relationship" relationship="viewControllers" id="fWH-6n-Ddj"/>
+                        <segue destination="NB0-mp-qeE" kind="relationship" relationship="viewControllers" id="Nkn-e5-s6X"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CZn-rE-dva" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
             <point key="canvasLocation" x="150.72463768115944" y="-38.169642857142854"/>
+        </scene>
+        <!--Mentor-->
+        <scene sceneID="eBo-Ry-hG6">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8ZO-u0-hMM" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Mentor" id="zfe-4s-Eqa"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1Rj-kR-B7r">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="iuW-Hp-Aeb" kind="relationship" relationship="rootViewController" id="Qi3-Qb-dpJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ISa-pP-87E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1059" y="642"/>
+        </scene>
+        <!--Admin Lesson View Controller-->
+        <scene sceneID="QH2-09-AWU">
+            <objects>
+                <viewController id="zEs-uO-Qbq" customClass="AdminLessonViewController" customModule="myAttendance" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KQm-O5-dsu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lesson Record" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RyL-rW-Xbr">
+                                <rect key="frame" x="90" y="144" width="235" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="37"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7FE-gw-dsT">
+                                <rect key="frame" x="109" y="271" width="197" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="View / Edit Lesson"/>
+                                <connections>
+                                    <action selector="viewLessonbtn:" destination="zEs-uO-Qbq" eventType="touchUpInside" id="ZUh-qC-814"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aK6-8j-JBi">
+                                <rect key="frame" x="109" y="387" width="197" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Add Lesson"/>
+                                <connections>
+                                    <action selector="addLessonbtn:" destination="zEs-uO-Qbq" eventType="touchUpInside" id="K5a-K9-Aob"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5jF-9j-Ckp">
+                                <rect key="frame" x="140" y="540" width="135" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Reset to Default"/>
+                                <connections>
+                                    <action selector="resetLessonDBbtn:" destination="zEs-uO-Qbq" eventType="touchUpInside" id="ill-BO-3tv"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="UMx-Z8-J41"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="8CO-mD-bxN"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pLC-Fo-bFa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1970" y="1392"/>
+        </scene>
+        <!--Lesson-->
+        <scene sceneID="kgj-gd-KoB">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NB0-mp-qeE" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Lesson" id="U6q-h5-DAU"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="v7q-6Z-IGL">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="zEs-uO-Qbq" kind="relationship" relationship="rootViewController" id="FdV-vO-PWv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3BW-bv-42C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1061" y="1353"/>
         </scene>
     </scenes>
 </document>

@@ -41,11 +41,93 @@ class LessonController {
         return lessonList
     }
     
+    
+    func resetDB(){
+        
+        let context = (UIApplication.shared.delegate as! AppDelegate ).persistentContainer.viewContext
+        let deleteFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "CDLesson")
+        let deleteRequest = NSBatchDeleteRequest(fetchRequest: deleteFetch)
+        do
+        {
+            try context.execute(deleteRequest)
+            try context.save()
+        }
+        catch
+        {
+            print ("There was an error")
+        }
+        print("Lesson Database successfully cleared")
+    }
+    
+    func assignMentorToLesson(){
+        
     // Add the generated code to corresponding Lesson record in the database
     func updateLesson(modulename:String, newLesson: Lesson){
         let appDelegate = (UIApplication.shared.delegate) as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        
+        
         let managedContext = appDelegate.persistentContainer.viewContext
         let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "CDLesson")
+        fetchRequest.predicate = NSPredicate(format: "modulename = %@", "MAD2 P01")
+        do{
+            let test = try context.fetch(fetchRequest)
+            let cdlesson = test[0]
+            
+            let fetchMentorRequest = NSFetchRequest<NSManagedObject>(entityName: "CDMentor")
+            fetchMentorRequest.predicate = NSPredicate(format: "mentorID = %@", "T10111111Z")
+            do{
+                let test = try context.fetch(fetchMentorRequest)
+                //print("Added for \(test[0].value(forKey: "lastname") as! String)")
+                let cdmentor = test[0]
+                cdlesson.setValue(cdmentor, forKey: "mentor")
+                try context.save()
+                print("successfully assigned mentor to lesson")
+                
+            }
+            catch {
+                print(error)
+            }
+        }
+        catch {
+            print(error)
+        }
+        
+        
+    }
+    
+    func assignmentStudentToLesson(){
+        
+//        let appDelegate = (UIApplication.shared.delegate) as! AppDelegate
+//        let context = appDelegate.persistentContainer.viewContext
+//
+//
+//        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "CDLesson")
+//        fetchRequest.predicate = NSPredicate(format: "modulename = %@", "MAD2 P01")
+//        do{
+//            let test = try context.fetch(fetchRequest)
+//            let cdlesson = test[0]
+//
+//            let fetchStudentRequest = NSFetchRequest<NSManagedObject>(entityName: "CDStudent")
+//            fetchStudentRequest.predicate = NSPredicate(format: "studentID = %@", "S10111111A")
+//
+//            do{
+//                let test = try context.fetch(fetchStudentRequest)
+//                //print("Added for \(test[0].value(forKey: "lastname") as! String)")
+//                let cdstudent = test[0]
+//                cdlesson.setValue(cdstudent, forKey: "student")
+//                try context.save()
+//                print("successfully assigned student to lesson")
+//
+//            }
+//            catch {
+//                print(error)
+//            }
+//        }
+//        catch {
+//            print(error)
+//        }
+        
         let lessonmodulename = newLesson.modName
         fetchRequest.predicate = NSPredicate(format:"modulename = %@", lessonmodulename)
         
